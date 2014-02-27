@@ -80,9 +80,7 @@ Donuts""",
 			r"signature": lambda: "^^Please ^^Report ^^any ^^errors ^^to ^^/r/DogecoinAnswersBot"
 }
 
-
-
-
+subreddits = "dogecoin"
 
 
 

@@ -58,7 +58,7 @@ def get_reply(body):
 	return reply
 
 def main():
-	comments = r.get_comments("thirdegree")
+	comments = r.get_comments(q.subreddits)
 	for post in comments:
 		rep = get_reply(post.body)
 		if rep and post.id not in done and post.author.name!=USERNAME:
