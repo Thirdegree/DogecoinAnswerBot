@@ -37,7 +37,7 @@ Treats.io\n\n
 Moolah.ch\n\n
 Local stores -\n\n
 Donuts""",
-			r"(?i)(How much|Value)[^\?\$]+doge( cost)*\?*":lambda: "Value for doge currently trading at $%s per doge according to www.vaultofsatoshi.com"%(main.get_values('DOGE', 'USD')),
+			r"(?i)(How much does|What is the value)[^\?\$]+doge( cost)*\?*":lambda: "Value for doge currently trading at $%s per doge according to www.vaultofsatoshi.com"%(main.get_values('DOGE', 'USD')),
 			r"(?i)How (much|many)[^(doge)]+\$1\?*":lambda: "$1 can buy you roughly %d doge (minus trade fees) www.vaultofsatoshi.com."%(1/float(main.get_values("DOGE", "USD"))),
 			r"(?i)When did doge.+start\?*":lambda: "Decenber 8^^(th), 2013 is when the coin started.",
 			r"(?i)(Who|What) are.+coins backed by\?*":lambda: "Everybody and nobody.  The community buys and sells similar to traditional stock.  No company owns or runs dogecoin.  Dogecoin is traded in marketplaces online and can be used to purchase things online and in some stores.",
