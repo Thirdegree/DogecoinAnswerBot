@@ -2,7 +2,7 @@
 #backup in case the main one fails.
 import main
 qAndA = {
-			r"(?i)\+\/u\/dogetipbot ([0-4]\.*[0-9]*|0*\.[0-9]+) [\w]+":lambda: "The minimum tip for dogetipbot is 5 doge.",
+			r"(?i)\+\/u\/dogetipbot ([0-4](\.[0-9]*)*|0*\.[0-9]+) [\w]+":lambda: "The minimum tip for dogetipbot is 5 doge.",
 			r"(?i)(How|Where) (can|do) I get flair\?*":lambda: "Upper right hand side of /r/dogecoin you will see the current number of subscribers.  Just below that is \"Show my flair on this subreddit. It looks like:\" make sure the box is checked and click EDIT to pick your flair.",
 			r"(?i)What('*s| is) a megaflip\?*":lambda: "Megaflip = minimum tip * random number between 1 and 20\n\nMore bot commands listed [HERE]( http://www.reddit.com/r/ALTcointip/wiki/index#wiki_amount_keywords).  You can tip a cookie, beer, coffee, or even all.",
 			r"(?i)(Who|What('*s)*).+satoshi\?*":lambda: "A Satoshi is the smallest measure of a Bitcoin. 1 Satoshi = 0.00000001 BTC (100,000,000 Satoshi = 1 BTC). This is used as a measure to compare the value of 1 dogecoin against bitcoin.\n\n* Current value of 1 dogecoin is %f Satoshi.\n\nFun fact: Satoshi is the first name of the founder of bitcoin."%(float(main.get_values("doge", "btc"))*100000000),
