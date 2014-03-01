@@ -57,7 +57,7 @@ def get_reply(body):
 	return reply
 
 def main():
-	comments = r.get_comments(q.subreddits)
+	comments = r.get_comments(q.subreddits, limit=100)
 	for post in comments:
 		rep = get_reply(post.body)
 		if rep and post.id not in done and post.author.name!=USERNAME:
@@ -68,7 +68,7 @@ def main():
 
 def check_scores():
 	me = r.get_redditor(USERNAME)
-	comments = me.get_comments()
+	comments = me.get_comments(limit = 100)
 	for post in comments:
 		#print post.score
 		if post.score<=(-1):
