@@ -6,7 +6,7 @@ import qAndA as q2
 
 # This dictionary is in the form {"re pattern":lambda: "answer %d"%(optional_funtion_call)}
 
-r = praw.Reddit("DogecoinAnswersBot by /u/Thirdegree")
+r = praw.Reddit("Keeping an eye on DogecoinAnswersBot by /u/Thirdegree")
 
 def _login():
 	USERNAME = raw_input("Username?\n> ")
@@ -15,7 +15,6 @@ def _login():
 	return USERNAME
 
 done = deque(maxlen=300)
-deleted_done = deque(maxlen=100)
 
 
 def fuzzy_correct(body):
@@ -63,7 +62,7 @@ def main():
 		rep = get_reply(post.body)
 		if rep and post.id not in done and post.author.name!=USERNAME:
 			done.append(post.id)
-			post.reply(rep)
+			#post.reply(rep)
 			sleep(2)
 	sleep(10)
 
@@ -72,9 +71,8 @@ def check_scores():
 	comments = me.get_comments()
 	for post in comments:
 		#print post.score
-		if post.score<=(-1)and post.id not in deleted_done:
-			deleted_done.append(post.id)
-			post.delete()
+		if post.score<=(-1):
+			#post.delete()
 			sleep(2)
 	sleep(2)
 
@@ -83,7 +81,7 @@ if __name__ == '__main__':
 	Trying = True
 	while Trying:
 		try:
-			USERNAME = _login()
+			USERNAME = "DogecoinAnswerBot"
 			Trying = False
 		except praw.errors.InvalidUserPass:
 			print "Invalid Username/password, please try again."
