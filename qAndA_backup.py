@@ -77,7 +77,7 @@ Donuts""",
 * Any money declared by a government to be legal tender.\n\n
 * State-issued money which is neither convertible by law to any other thing, nor fixed in value in terms on any objective standard.\n\n
 * Money without intrinsic value that is used as money because of government decree.""",
-			r"signature": lambda: "^^Please ^^Report ^^any ^^errors ^^to ^^/r/DogecoinAnswersBot"
+			r"signature": lambda: "^^Please ^^Report ^^any ^^errors ^^to ^^/r/DogecoinAnswerBot"
 }
 
 subreddits = "dogecoin"
