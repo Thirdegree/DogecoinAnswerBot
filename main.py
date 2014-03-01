@@ -82,7 +82,7 @@ if __name__ == '__main__':
 	Trying = True
 	while Trying:
 		try:
-			USERNAME  _login()
+			USERNAME = _login()
 			Trying = False
 		except praw.errors.InvalidUserPass:
 			print "Invalid Username/password, please try again."
