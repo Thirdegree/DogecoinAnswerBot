@@ -62,7 +62,7 @@ def main():
 		rep = get_reply(post.body)
 		if rep and post.id not in done and post.author.name!=USERNAME:
 			done.append(post.id)
-			#post.reply(rep)
+			post.reply(rep)
 			sleep(2)
 	sleep(10)
 
@@ -72,7 +72,8 @@ def check_scores():
 	for post in comments:
 		#print post.score
 		if post.score<=(-1):
-			#post.delete()
+			r.send_message("Thirdegree", "Post deleted for low score", post.body)
+			post.delete()
 			sleep(2)
 	sleep(2)
 
@@ -81,7 +82,7 @@ if __name__ == '__main__':
 	Trying = True
 	while Trying:
 		try:
-			USERNAME = "DogecoinAnswerBot"
+			USERNAME  _login()
 			Trying = False
 		except praw.errors.InvalidUserPass:
 			print "Invalid Username/password, please try again."
@@ -98,11 +99,11 @@ if __name__ == '__main__':
 				r.send_message("Thirdegree", "Problem loading main qAndA modual", e)
 			q = reload(q1)
 			print e, "r2"
-			
 			sleep(2)
 		try:
 			check_scores()
-			main()
+			for i in xrange(3):
+				main()
 		except praw.errors.RateLimitExceeded:
 			print "Rate limit exceeded, sleeping 10 min"
 			sleep(590)
