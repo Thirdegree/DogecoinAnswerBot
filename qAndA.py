@@ -11,7 +11,7 @@ qAndA = {
 			r"(?i)(What is the|explain the).+(halving|halvening)\?":lambda: "The halvening means, when we are at the 100.000 block block reward will be half of what it's today. Now for every block we \"mine\", we get 0 - 1,000,000 Dogeocoins. After the \"halvening\" we will get 0 - 500,000 per \"mined\" block. So, for every 100,000 blocks we \"mine\", block reward get smaller. In conclusion, this so called \"halvening\" will occur every 100,000 blocks until the block reward are at 0 - 10,000 Dogecoins only. By then we hit that, we will have mined all 100 billion dogecoins there are, so after that an additional 5 billion will be added per year with 0 - 10,000 block reward. That means 5% more doges first year, next year around 4.8% and it keeps lowering for every year. (percentage lowers, not amount of doges which still is 5 billion a year).  Comment submitted by /u/WowSuchMoney Halving chart that includes dates can be seen [HERE]( http://en.wikipedia.org/wiki/Dogecoin#Block_schedule)",
 			r"(?i)Who (made|invented) dogecoin\?":lambda: "Dogecoin was created on December 8th, 2013 by Jackson Palmer (/u/ummjackson)",
 			r"(?i)What('*s| is) the minimum I can tip\?":lambda: "5 doge.",
-			r"(?i)(Where|How) .+ buy doge.*\?":lambda: u"""There are a few ways to buy dogecoin...\n\n
+			r"(?i)(Where|How) (to|can|do) .+ buy doge(coin)*\?":lambda: u"""There are a few ways to buy dogecoin...\n\n
 Dogecoin market/exchange\n\n
 * [Vault Of Satoshi]( https://www.vaultofsatoshi.com/)\n\n
 * [BTER](https://bter.com/trade/doge_btc)\n\n
